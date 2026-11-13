@@ -1,1 +1,10 @@
-
+curl.exe "http://127.0.0.1:5000/capital?country_code=US"
+{
+  "country_code": "US",
+  "capital_city": "Washington"
+}curl.exe -X POST http://127.0.0.1:5000/capital -H "Content-Type: application/json" -d "{\"country_code\":\"GB\"}"
+curl.exe "http://127.0.0.1:5000/capital?country_code=us"
+{
+  "error": "Invalid input: Country code must use uppercase letters."
+}
+curl.exe "http://127.0.0.1:5000/capital?country_code=XX"
